@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+
+    background:
+        radial-gradient(circle at top left,
+            #7b1fa2 0%,
+            transparent 25%),
+
+        radial-gradient(circle at bottom right,
+            #5e35b1 0%,
+            transparent 25%),
+
+        linear-gradient(135deg,
+            #41042D 0%,
+            #0F0A52 50%,
+            #2A0B45 100%);
+}
+
+.main {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.top {
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
+    padding: 20px;
+    color: white;
+}
+
+.top h2 {
+    margin-top: 60px;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.top p {
+    margin-top: 60px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.cards-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+
+    width: 240px;
+
+    padding: 18px;
+
+    border-radius: 24px;
+
+    background-color: rgba(130, 104, 170, 0.35);
+
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card img {
+
+    width: 100%;
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    margin-bottom: 18px;
+}
+
+.card-info {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    color: white;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.text h3 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.text span {
+    font-size: 13px;
+    color: #d3c7ea;
+}
+
+.card-info i {
+    font-size: 20px;
+    color: #ebe7f4;
+    cursor: pointer;
+}
+
+.card button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 30px;
+    border: 2px solid #bb86fc;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
