@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #1d1728;
+    color: white;
+}
+
+
+/* HERO SECTION */
+
+.hero {
+
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.45)),
+        url("./assets/image.png");
+
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden;
+    
+    border-bottom-left-radius: 50% 120px;
+    border-bottom-right-radius: 50% 120px;
+}
+
+nav {
+
+    width: 100%;
+
+    padding: 20px 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+    z-index: 5;
+}
+
+.logo h2 {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.icons {
+
+    display: flex;
+    gap: 15px;
+}
+
+.icons i {
+
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.hero-content {
+    position: absolute;
+    top: 32%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 5;
+}
+
+.hero-content p {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 {
+    font-size: 90px;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+    line-height: 0.9;
+}
+
+.hero-content h3 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 18px 60px;
+    border: none;
+    border-radius: 6px;
+    background-color: #f0c96d;
+    font-size: 16px;
+    font-weight: 700;
+    z-index: 20;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.character {
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 80%;
+    z-index: 10;
+}
+
+
+.vision {
+    width: 100%;
+    padding: 100px 120px;
+    background-color: #241d31;
+    position: relative;
+}
+
+.vision h2 {
+    text-align: center;
+    font-size: 42px;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+.line {
+
+    width: 100%;
+    height: 2px;
+
+    background-color: rgba(255, 255, 255, 0.2);
+
+    margin-bottom: 60px;
+}
+
+.vision-content {
+
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.vision-content p {
+
+    width: 50%;
+
+    line-height: 32px;
+
+    color: #c9c9c9;
+
+    font-size: 17px;
+}
