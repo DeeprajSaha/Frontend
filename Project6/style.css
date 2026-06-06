@@ -1317,6 +1317,7 @@ footer {
     .card-wrapper {
         width: 22%;
         min-width: 200px;
+        align-items: stretch;
     }
 
     .card {
@@ -1332,6 +1333,10 @@ footer {
 
     .card:hover img {
         transform: scale(1.05);
+    }
+
+    .card-top{
+        flex: 1;
     }
 
     .card-top-text button {
@@ -1416,6 +1421,7 @@ footer {
 
     .review-container {
         width: 100%;
+        align-items: stretch;
         padding: 1rem 4rem;
         margin-bottom: 6rem;
     }
@@ -1423,11 +1429,16 @@ footer {
     .review-container .card-container {
         display: flex;
         flex-direction: column;
+        min-width: 28%;
         width: 20%;
         flex-shrink: 0;
         border-radius: 1.2rem;
         overflow: hidden;
         border: 1px solid #ccc;
+    }
+
+    .card-top{
+        flex: 1;
     }
 
     .card-top h1 {
@@ -1661,10 +1672,11 @@ footer {
         border-radius: 1.6rem;
         display: flex;
         flex-direction: column;
+        height: auto;
     }
 
     .sec8-card-top {
-        min-height: 20vw;
+        min-height: 25vw;
         flex: 1;
     }
 
