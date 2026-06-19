@@ -62,8 +62,8 @@ function createTask(task) {
         localData = localData.filter(item => item.id !== task.id);
 
         localStorage.setItem("addTask", JSON.stringify(localData));
-        
-        taskCard.remove()
+
+        taskCard.remove();
     })
 
     // delete button
