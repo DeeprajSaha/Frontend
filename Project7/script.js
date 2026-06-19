@@ -48,6 +48,8 @@ function createTask(task) {
     </div>
     `;
 
+    const statusEl = taskCard.querySelector(".status");
+
     // edit button 
     const editBtn = taskCard.querySelector(".edit-btn")
 
@@ -84,8 +86,6 @@ function createTask(task) {
 
     // complete button
     const completeBtn = taskCard.querySelector(".complete-btn");
-
-    const statusEl = taskCard.querySelector(".status");
 
     completeBtn.addEventListener("click", () => {
         taskCard.classList.toggle("completed");
@@ -132,7 +132,7 @@ addBtn.addEventListener("click", () => {
     createTask(addTask)
     // clear input field
     taskInput.value = "";
-}, { once: true });
+});
 
 
 allBtn.addEventListener("click", () => {
