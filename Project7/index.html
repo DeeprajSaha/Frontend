@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styel.css">
+</head>
+
+<body>
+    <header>
+        <h1>Task Manager</h1>
+        <button id="themeBtn">Toggle Theme</button>
+    </header>
+
+    <div class="form">
+        <input type="text" id="taskInput" placeholder="Enter task title" />
+        <select id="category">
+            <option value="work">Work</option>
+            <option value="personal">Personal</option>
+            <option value="study">Study</option>
+        </select>
+        <button id="addBtn">Add Task</button>
+    </div>
+
+    <div class="filters">
+        <button id="all">All</button>
+        <button id="work">Work</button>
+        <button id="study">Study</button>
+        <button id="personal">Personal</button>
+    </div>
+
+    <div id="taskContainer"></div>
+
+    <div class="hrLine"></div>
+
+    <div class="eventPart">
+
+        <div id="grandParent" class="event-box">
+            <p>GrandParent</p>
+            <div id="parent">
+                <p>Parent</p>
+                <button id="child">Child</button>
+            </div>
+        </div>
+
+        <div class="verLine"></div>
+        
+        <div id="event-log">
+            <h3>Event Flow</h3>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
