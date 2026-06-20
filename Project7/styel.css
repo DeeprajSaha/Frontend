@@ -302,17 +302,21 @@ header h1 {
 
 #event-log {
     width: 350px;
-    min-height: 300px;
+    height: 300px;
     border: 2px solid #d1d5db;
     border-radius: 12px;
-    padding: 1rem;
     overflow-y: auto;
+    
 }
 
 #event-log h3 {
-    margin-bottom: 1rem;
+    position: sticky;
+    top: 0;
+    margin: 0;
+    padding: 1rem;
+    background: #08122e; /* same as card background */
+    z-index: 1;
 }
-
 #event-log p {
     padding: 10px;
     margin-bottom: 10px;
