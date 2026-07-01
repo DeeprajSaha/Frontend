@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartBudget</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="loginForm">
+        <h1>Welcome Back</h1>
+        <p>Login to SmartBudget</p>
+        <form>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username">
+
+            <label for="password">password</label>
+            <input type="password" id="password" name="password">
+
+            <button id="log-Btn">Login</button>
+        </form>
+
+        <p class="register">
+            Don't have an account?
+            <a class="showRegister">Register here</a>
+        </p>
+    </div>
+
+    <div class="registerForm  hidden">
+        <h1>Welcome Back</h1>
+        <p>Join SmartBudget</p>
+        <form>
+            <label for="username">Username</label>
+            <input type="text" id="reg-username" name="username">
+            
+            <label for="password">password</label>
+            <input type="password" id="reg-password" name="password">
+
+            <button id="reg-Btn">Register</button>
+        </form>
+
+        <p class="login">
+            Already have an account?
+            <a class="showLogin">Login here</a>
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
