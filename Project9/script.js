@@ -32,14 +32,17 @@ registerBtn.addEventListener("click", () => {
     login.classList.remove("hidden")
 })
 
-loginBtn.addEventListener("click", () => {
+loginBtn.addEventListener("click", (e) => {
+    e.preventDefault();
 
     let userData = JSON.parse(localStorage.getItem("user")) || [];
-    
+
     const username = inputUser.value;
     const password = inputPass.value;
     if (userData.username === username && userData.password === password) {
-        alert(`Login successful! Welcome back ${username}`);
+        localStorage.setItem("loggedInUser", username);
+        window.location.href = "dashboard.html";
+        console.log(window.location.href);
     } else {
         alert("Login Failed Try Agine Latter!!!")
     }
