@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <link rel="stylesheet" href="todo.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <nav>
+        <div class="left">
+            <h3><span>To-Do</span> List</h3>
+        </div>
+
+        <div class="right">
+            <button class="nav-icon" id="themeBtn">
+                <i class="ri-sun-line"></i>
+            </button>
+
+            <a href="https://github.com/DeeprajSaha" class="nav-icon" target="_blank">
+                <i class="ri-github-line"></i>
+            </a>
+        </div>
+    </nav>
+
+    <a href="../index.html" class="homebtn">
+        <i class="ri-arrow-left-line"></i>
+        Home
+    </a>
+
+    <main>
+        <section class="input">
+            <input type="text" placeholder="Enter task..." id="input">
+            <button id="add">Add</button>
+        </section>
+
+        <section id="output"></section>
+    </main>
+
+    <script src="todo.js"></script>
+</body>
+
+</html>

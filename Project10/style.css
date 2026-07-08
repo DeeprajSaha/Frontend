@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+
+    background: #F8F8F8;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* ================= NAVBAR ================= */
+
+nav {
+    width: 100%;
+    height: 72px;
+
+    padding: 0 48px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #fff;
+    border-bottom: 1px solid #ececec;
+}
+
+nav .left h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2D2D2D;
+}
+
+nav .left span {
+    color: #E0A458;
+}
+
+nav .right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    outline: none;
+    border-radius: 50%;
+
+    background: #F8F8F8;
+
+    color: #444;
+    font-size: 1.25rem;
+
+    cursor: pointer;
+
+    transition: all .3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+}
+
+nav .nav-icon:hover {
+    transform: translateY(-3px);
+    background: #E0A458;
+    color: #fff;
+    box-shadow: 0 12px 25px rgba(79, 70, 229, .35);
+}
+
+
+/* Main */
+
+main {
+
+    width: 100%;
+    min-height: 91vh;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Weather Section */
+
+.weather-section {
+    width: 100%;
+    padding: 40px;
+
+    display: flex;
+    justify-content: center;
+}
+
+/* Weather Card */
+
+.weather-card {
+    width: 100%;
+    max-width: 1100px;
+    min-height: 260px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 40px 50px;
+
+    background: transparent;
+    border-radius: 24px;
+
+    border: 2px solid rgba(235, 142, 21, 0.677);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, .08),
+        0 5px 10px rgba(0, 0, 0, .04);
+}
+
+/* Left */
+
+.weather-card .left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#date {
+    color: #232222;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#day {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #282828;
+    line-height: 1.2;
+}
+
+#time {
+    display: block;
+    margin-top: 8px;
+
+    color: #E0A458;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+#city {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #212020;
+}
+
+/* Right */
+
+.weather-card .right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.weather-icon {
+    font-size: 4rem;
+    color: #E0A458;
+}
+
+#temp {
+    font-size: 4.2rem;
+    color: #E0A458;
+    font-weight: 700;
+}
+
+#condition {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2d2d2d;
+}
+
+/* Extra Info */
+
+.extra {
+    margin-top: 18px;
+
+    display: flex;
+    gap: 15px;
+}
+
+.info-box {
+    min-width: 120px;
+
+    padding: 14px 18px;
+
+    background: #fafafa;
+
+    border: 1px solid #ededed;
+
+    border-radius: 14px;
+
+    text-align: center;
+}
+
+.info-box p {
+    font-size: .85rem;
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.info-box span {
+    font-size: 1.1rem;
+    color: #E0A458;
+    font-weight: 700;
+}
+
+
+/* ================= WINDOWS DOCK ================= */
+
+.dock {
+    position: fixed;
+
+    left: 50%;
+    bottom: 25px;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    padding: 12px 20px;
+
+    background: rgba(255, 255, 255, .6);
+    backdrop-filter: blur(25px);
+
+    border: 1px solid rgba(255, 255, 255, .35);
+    border-radius: 22px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, .15),
+        inset 0 1px 1px rgba(255, 255, 255, .5);
+
+    z-index: 1000;
+}
+
+.dock-item {
+    width: 64px;
+    height: 64px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 18px;
+
+    cursor: pointer;
+
+    transition: transform .25s ease, background .25s ease, box-shadow .25s ease;
+}
+
+.dock-item,
+.dock-item img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: contain;
+
+    transition: all .3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.dock:hover .dock-item {
+    transform: scale(.95);
+}
+
+.dock .dock-item:hover {
+    transform: translateY(-18px) scale(1.25);
+    background: #fff;
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, .15);
+
+    z-index: 2;
+}
+
+.dock .dock-item:hover+.dock-item {
+    transform: scale(1.08);
+}
+
+.dock .dock-item:has(+ .dock-item:hover) {
+    transform: scale(1.08);
+}
+
+.dock-item:hover img {
+    transform: scale(1.12);
+}
+
+.dock-item:active {
+    transform:
+        translateY(-10px) scale(1.05);
+}

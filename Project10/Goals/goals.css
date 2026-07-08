@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+
+    background: #F8F8F8;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* ================= NAVBAR ================= */
+
+nav {
+    width: 100%;
+    height: 72px;
+
+    padding: 0 48px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #fff;
+    border-bottom: 1px solid #ececec;
+}
+
+nav .left h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2D2D2D;
+}
+
+nav .left span {
+    color: #E0A458;
+}
+
+nav .right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    outline: none;
+    border-radius: 50%;
+
+    background: #F8F8F8;
+
+    color: #444;
+    font-size: 1.25rem;
+
+    cursor: pointer;
+
+    transition: all .3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+}
+
+nav .nav-icon:hover {
+    transform: translateY(-3px);
+    background: #E0A458;
+    color: #fff;
+    box-shadow: 0 12px 25px rgba(79, 70, 229, .35);
+}
+
+
+/* ================= HOME BUTTON ================= */
+
+.homebtn {
+    position: fixed;
+    top: 90px;
+    left: 30px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 24px;
+
+    background: #E0A458;
+    color: #fff;
+
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+
+    border-radius: 12px;
+    border: 2px solid transparent;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .12);
+
+    transition: all .25s ease;
+}
+
+.homebtn:hover {
+    background: #c98d3d;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .18);
+}
+
+.homebtn:active {
+    transform: translateY(0);
+}
+
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 25px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+}
+
+.left button {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    background: #E2A24A;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.3rem;
+    transition: .25s;
+}
+
+.left button:hover {
+    background: #d18f36;
+}
+
+.center {
+    flex: 1;
+}
+
+.center input {
+    width: 100%;
+    padding: 13px 18px;
+    border: 2px solid #ececec;
+    border-radius: 12px;
+    outline: none;
+    font-size: 1rem;
+    transition: .3s;
+}
+
+.center input:focus {
+    border-color: #E2A24A;
+    box-shadow: 0 0 0 4px rgba(226, 162, 74, .15);
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#addBtn {
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    background: #E2A24A;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .25s;
+}
+
+#addBtn:hover {
+    background: #d18f36;
+    transform: translateY(-2px);
+}
+
+#themeBtn {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    background: #f5f5f5;
+    color: #444;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: .25s;
+}
+
+#themeBtn:hover {
+    background: #E2A24A;
+    color: #fff;
+}
+
+#overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.form-box {
+    width: 450px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .15);
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 6px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    background: #f3f3f3;
+    color: #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.3rem;
+    transition: all .25s ease;
+}
+
+.close:hover {
+    background: #e74c3c;
+    color: #fff;
+    transform: rotate(90deg);
+}
+
+.close:active {
+    transform: scale(0.95);
+}
+
+.form-box input,
+.form-box textarea {
+    width: 100%;
+    border: 2px solid #ececec;
+    border-radius: 10px;
+    padding: 14px;
+    outline: none;
+    font-size: 1rem;
+    transition: .3s;
+}
+
+.form-box textarea {
+    resize: none;
+    height: 180px;
+}
+
+.form-box input:focus,
+.form-box textarea:focus {
+    border-color: #E2A24A;
+}
+
+#saveBtn {
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    background: #E2A24A;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .25s;
+}
+
+#saveBtn:hover {
+    background: #d18f36;
+}
+
+#notesContainer {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.note-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+    transition: .3s ease;
+    border-top: 5px solid #E2A24A;
+}
+
+.note-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, .12);
+}
+
+.note-card h3 {
+    font-size: 1.3rem;
+    color: #2c2c2c;
+    margin-bottom: 12px;
+    word-break: break-word;
+}
+
+.note-card p:nth-child(2) {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    word-break: break-word;
+}
+
+.note-card p:last-of-type {
+    color: #999;
+    font-size: .9rem;
+    margin-bottom: 20px;
+}
+
+.editBtn {
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    background: #E2A24A;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.editBtn:hover {
+    background: #d28f37;
+}
+
+.deleteBtn {
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    background: #ef4444;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.deleteBtn:hover {
+    background: #dc2626;
+}

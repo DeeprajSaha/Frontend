@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+
+    background: #F8F8F8;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* ================= NAVBAR ================= */
+
+nav {
+    width: 100%;
+    height: 72px;
+
+    padding: 0 48px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #fff;
+    border-bottom: 1px solid #ececec;
+}
+
+nav .left h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2D2D2D;
+}
+
+nav .left span {
+    color: #E0A458;
+}
+
+nav .right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    outline: none;
+    border-radius: 50%;
+
+    background: #F8F8F8;
+
+    color: #444;
+    font-size: 1.25rem;
+
+    cursor: pointer;
+
+    transition: all .3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+}
+
+nav .nav-icon:hover {
+    transform: translateY(-3px);
+    background: #E0A458;
+    color: #fff;
+    box-shadow: 0 12px 25px rgba(79, 70, 229, .35);
+}
+
+
+/* ================= HOME BUTTON ================= */
+
+.homebtn {
+    position: fixed;
+    top: 90px;
+    left: 30px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 24px;
+
+    background: #E0A458;
+    color: #fff;
+
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+
+    border-radius: 12px;
+    border: 2px solid transparent;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .12);
+
+    transition: all .25s ease;
+}
+
+.homebtn:hover {
+    background: #c98d3d;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .18);
+}
+
+.homebtn:active {
+    transform: translateY(0);
+}
+
+main {
+    width: 450px;
+    margin: 80px auto;
+    padding: 45px 35px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+main h1:first-child {
+    font-size: 2rem;
+    color: #2c2c2c;
+    margin-bottom: 30px;
+}
+
+#display {
+    font-size: 4rem;
+    font-family: monospace;
+    font-weight: bold;
+    color: #E2A24A;
+    letter-spacing: 4px;
+    margin-bottom: 40px;
+}
+
+main button {
+    border: none;
+    outline: none;
+    padding: 14px 28px;
+    margin: 0 8px;
+    border-radius: 12px;
+    background: #E2A24A;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .25s ease;
+}
+
+main button:hover {
+    background: #d18f36;
+    transform: translateY(-3px);
+}
+
+main button:active {
+    transform: scale(.96);
+}

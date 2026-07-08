@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goals</title>
+    <link rel="stylesheet" href="goals.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <nav>
+        <div class="left">
+            <h3><span>Goals</span> planner</h3>
+        </div>
+
+        <div class="right">
+            <button class="nav-icon" id="themeBtn">
+                <i class="ri-sun-line"></i>
+            </button>
+
+            <a href="https://github.com/DeeprajSaha" class="nav-icon" target="_blank">
+                <i class="ri-github-line"></i>
+            </a>
+        </div>
+    </nav>
+
+    <a href="../index.html" class="homebtn">
+        <i class="ri-arrow-left-line"></i>
+        Home
+    </a>
+
+    <main>
+
+        <header>
+
+            <div class="center">
+                <input type="text" placeholder="Search Note">
+            </div>
+
+            <div class="right">
+                <button id="addBtn">Add Note</button>
+
+            </div>
+        </header>
+
+    </main>
+
+    <div id="overlay" class="hidden">
+        <div class="form-box">
+
+            <button class="close">
+                <i class="ri-close-fill"></i>
+            </button>
+
+            <input type="text" id="title" placeholder="Enter Title">
+
+            <textarea id="description" placeholder="Enter Description"></textarea>
+
+            <button id="saveBtn">Save</button>
+
+        </div>
+    </div>
+
+    <div id="notesContainer"></div>
+
+
+    <script src="goals.js"></script>
+</body>
+
+</html>

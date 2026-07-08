@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <nav>
+        <div class="left">
+            <h3><span>Productivity</span> Dashboard</h3>
+        </div>
+
+        <div class="right">
+            <button class="nav-icon" id="themeBtn">
+                <i class="ri-sun-line"></i>
+            </button>
+
+            <a href="https://github.com/DeeprajSaha" class="nav-icon" target="_blank">
+                <i class="ri-github-line"></i>
+            </a>
+        </div>
+    </nav>
+
+    <main>
+
+        <section class="weather-section">
+
+            <div class="weather-card">
+
+                <!-- Left Side -->
+                <div class="left">
+
+                    <p id="date">7 July, 2026</p>
+
+                    <h1 id="day">Tuesday</h1>
+                    <p id="time">11:31:33 PM</p>
+
+                    <h2 id="city">Mumbai</h2>
+
+                </div>
+
+                <!-- Right Side -->
+                <div class="right">
+
+                    <div class="weather-icon">
+                        <i class="ri-sun-cloudy-line"></i>
+                    </div>
+
+                    <h1 id="temp">26°C</h1>
+
+                    <h2 id="condition">Patchy rain nearby</h2>
+
+                    <div class="extra">
+
+                        <div class="info-box">
+                            <p>Heat Index</p>
+                            <span id="heat">28°C</span>
+                        </div>
+
+                        <div class="info-box">
+                            <p>Humidity</p>
+                            <span id="humidity">85%</span>
+                        </div>
+
+                        <div class="info-box">
+                            <p>Wind</p>
+                            <span id="wind">7.9 km/h</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="dock">
+
+            <a href="./Todo/todo.html" class="dock-item todo" id="todo">
+                <img src="./assets/todo.png" alt="Todo">
+            </a>
+
+            <a href="./Timer/timer.html" class="dock-item timer" id="timer">
+                <img src="./assets/timer.jpg" alt="Timer">
+            </a>
+
+            <a href="./Planner/planner.html" class="dock-item planner" id="planner">
+                <img src="./assets/planner.jpg" alt="Planner">
+            </a>
+
+            <a href="./Goals/goals.html" class="dock-item goals" id="goals">
+                <img src="./assets/goals.png" alt="Goals">
+            </a>
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
