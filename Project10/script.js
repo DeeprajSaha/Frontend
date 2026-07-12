@@ -66,6 +66,27 @@ function updateClock() {
 updateClock();
 setInterval(updateClock, 1000);
 
+function getCurrentLocation() {
+    if (!navigator.geolocation) {
+        alert("Geolocation is not supported by your browser.");
+        getWeather("Siliguri");
+        return;
+    }
+
+    navigator.geolocation.getCurrentPosition(
+        (position) => {
+            const lat = position.coords.latitude;
+            const lon = position.coords.longitude;
+
+            getWeather(`${lat},${lon}`);
+        },
+
+        (error) => {
+            console.log(error);
+            getWeather("Siliguri");
+        }
+    );
+}
 
 async function getWeather(location) {
 
@@ -105,4 +126,4 @@ async function getWeather(location) {
     }
 }
 
-getWeather("siliguri")
+getCurrentLocation();
