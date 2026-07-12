@@ -69,7 +69,7 @@ setInterval(updateClock, 1000);
 function getCurrentLocation() {
     if (!navigator.geolocation) {
         alert("Geolocation is not supported by your browser.");
-        getWeather("Siliguri");
+        getWeather("Mumbai");
         return;
     }
 
@@ -83,7 +83,7 @@ function getCurrentLocation() {
 
         (error) => {
             console.log(error);
-            getWeather("Siliguri");
+            getWeather("Mumbai");
         }
     );
 }
@@ -100,7 +100,7 @@ async function getWeather(location) {
 
     condition.innerText = data.current.condition.text;
 
-    city.innerText = `${data.location.name}, ${data.location.region}`;
+    city.innerText = `${data.location.name}`;
 
     heat.innerText = data.current.feelslike_c + "°C";
 
