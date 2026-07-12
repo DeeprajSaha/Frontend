@@ -6,11 +6,34 @@
         "Segoe UI", sans-serif;
 }
 
+:root {
+    --bg: #f8f8f8;
+    --nav: #ffffff;
+    --card: #ffffff;
+    --text: #2d2d2d;
+    --secondary: #666;
+    --border: #ececec;
+    --shadow: 0 12px 30px rgba(0, 0, 0, .08);
+}
+
+body.dark {
+    --bg: #0f1117;
+    --nav: #181a20;
+    --card: #222831;
+    --text: #ffffff;
+    --secondary: #b8b8b8;
+    --border: #353941;
+    --shadow: 0 12px 30px rgba(0, 0, 0, .35);
+}
+
 body {
     min-height: 100vh;
     margin: 0;
 
-    background: #F8F8F8;
+    background: var(--bg);
+    color: var(--text);
+    transition: .3s;
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -30,14 +53,14 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-    background: #fff;
-    border-bottom: 1px solid #ececec;
+    background: var(--nav);
+    border-bottom: 1px solid var(--border);
 }
 
 nav .left h3 {
     font-size: 2rem;
     font-weight: 700;
-    color: #2D2D2D;
+    color: var(--text);
 }
 
 nav .left span {
@@ -62,9 +85,9 @@ nav .right {
     outline: none;
     border-radius: 50%;
 
-    background: #F8F8F8;
+    background: var(--card);
 
-    color: #444;
+    color: var(--text);
     font-size: 1.25rem;
 
     cursor: pointer;
@@ -123,15 +146,19 @@ main {
     width: 450px;
     margin: 80px auto;
     padding: 45px 35px;
-    background: #fff;
+
+    background: var(--card);
+    border: 1px solid var(--border);
+
     border-radius: 20px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow);
+    
     text-align: center;
 }
 
 main h1:first-child {
     font-size: 2rem;
-    color: #2c2c2c;
+    color: var(--text);
     margin-bottom: 30px;
 }
 

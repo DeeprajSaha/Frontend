@@ -2,6 +2,30 @@ const input = document.getElementById("input");
 const addBtn = document.getElementById("add");
 const output = document.getElementById("output");
 
+const body = document.body;
+const themeBtn = document.getElementById("themeBtn");
+const themeIcon = themeBtn.querySelector("i");
+
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "dark") {
+    body.classList.add("dark");
+    themeIcon.className = "ri-sun-line";
+} else {
+    themeIcon.className = "ri-moon-line";
+}
+
+themeBtn.addEventListener("click", () => {
+    body.classList.toggle("dark");
+
+    if (body.classList.contains("dark")) {
+        localStorage.setItem("theme", "dark");
+        themeIcon.className = "ri-sun-line";
+    } else {
+        localStorage.setItem("theme", "light");
+        themeIcon.className = "ri-moon-line";
+    }
+});
 
 let tasks = JSON.parse(localStorage.getItem("addTODO")) || [];
 

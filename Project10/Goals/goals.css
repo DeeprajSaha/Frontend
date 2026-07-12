@@ -6,11 +6,38 @@
         "Segoe UI", sans-serif;
 }
 
+:root {
+    --bg: #f8f8f8;
+    --nav: #ffffff;
+    --card: #ffffff;
+    --text: #2d2d2d;
+    --secondary: #666;
+    --border: #ececec;
+    --input: #fafafa;
+    --shadow: 0 10px 25px rgba(0, 0, 0, .08);
+    --overlay: rgba(0, 0, 0, .45);
+}
+
+body.dark {
+    --bg: #0f1117;
+    --nav: #181a20;
+    --card: #222831;
+    --text: #ffffff;
+    --secondary: #b8b8b8;
+    --border: #353941;
+    --input: #2b3038;
+    --shadow: 0 10px 25px rgba(0, 0, 0, .35);
+    --overlay: rgba(0, 0, 0, .65);
+}
+
+
 body {
     min-height: 100vh;
     margin: 0;
 
-    background: #F8F8F8;
+    background: var(--bg);
+    color: var(--text);
+    transition: .3s;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -30,14 +57,14 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-    background: #fff;
-    border-bottom: 1px solid #ececec;
+    background: var(--nav);
+    border-bottom: 1px solid var(--border);
 }
 
 nav .left h3 {
     font-size: 2rem;
     font-weight: 700;
-    color: #2D2D2D;
+    color: var(--text);
 }
 
 nav .left span {
@@ -62,15 +89,15 @@ nav .right {
     outline: none;
     border-radius: 50%;
 
-    background: #F8F8F8;
+    background: var(--card);
 
-    color: #444;
+    color: var(--text);
     font-size: 1.25rem;
 
     cursor: pointer;
 
     transition: all .3s ease;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+    box-shadow: var(--shadow);
 }
 
 nav .nav-icon:hover {
@@ -132,9 +159,10 @@ header {
     align-items: center;
     gap: 20px;
     padding: 18px 25px;
-    background: #fff;
+    background: var(--card);
     border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
 }
 
 .left button {
@@ -160,9 +188,11 @@ header {
 .center input {
     width: 100%;
     padding: 13px 18px;
-    border: 2px solid #ececec;
+    border: 2px solid var(--border);
     border-radius: 12px;
     outline: none;
+    background: var(--input);
+    color: var(--text);
     font-size: 1rem;
     transition: .3s;
 }
@@ -215,7 +245,7 @@ header {
 #overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, .45);
+    background: var(--overlay);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -227,13 +257,14 @@ header {
 
 .form-box {
     width: 450px;
-    background: #fff;
+    background: var(--card);
     padding: 30px;
     border-radius: 18px;
     display: flex;
     flex-direction: column;
     gap: 18px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, .15);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
     position: relative;
 }
 
@@ -245,8 +276,8 @@ header {
     height: 30px;
     border: none;
     border-radius: 50%;
-    background: #f3f3f3;
-    color: #555;
+    background: var(--input);
+    color: var(--text);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -268,7 +299,9 @@ header {
 .form-box input,
 .form-box textarea {
     width: 100%;
-    border: 2px solid #ececec;
+    background: var(--input);
+    color: var(--text);
+    border: 2px solid var(--border);
     border-radius: 10px;
     padding: 14px;
     outline: none;
@@ -284,6 +317,11 @@ header {
 .form-box input:focus,
 .form-box textarea:focus {
     border-color: #E2A24A;
+}
+
+.form-box input::placeholder,
+.form-box textarea::placeholder {
+    color: var(--secondary);
 }
 
 #saveBtn {
@@ -313,10 +351,11 @@ header {
 }
 
 .note-card {
-    background: #fff;
+    background: var(--card);
     border-radius: 18px;
+    border: 1px solid var(--border);
     padding: 22px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+    box-shadow: var(--shadow);
     transition: .3s ease;
     border-top: 5px solid #E2A24A;
 }
@@ -328,20 +367,20 @@ header {
 
 .note-card h3 {
     font-size: 1.3rem;
-    color: #2c2c2c;
+    color: var(--text);
     margin-bottom: 12px;
     word-break: break-word;
 }
 
 .note-card p:nth-child(2) {
-    color: #666;
+    color: var(--secondary);
     line-height: 1.6;
     margin-bottom: 20px;
     word-break: break-word;
 }
 
 .note-card p:last-of-type {
-    color: #999;
+    color: var(--secondary);
     font-size: .9rem;
     margin-bottom: 20px;
 }

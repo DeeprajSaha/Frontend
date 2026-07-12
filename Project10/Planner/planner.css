@@ -6,11 +6,37 @@
         "Segoe UI", sans-serif;
 }
 
+:root {
+    --bg: #f8f8f8;
+    --nav: #ffffff;
+    --card: #ffffff;
+    --text: #2d2d2d;
+    --secondary: #666;
+    --border: #ececec;
+    --input: #fafafa;
+    --shadow: 0 12px 30px rgba(0, 0, 0, .08);
+}
+
+body.dark {
+    --bg: #0f1117;
+    --nav: #181a20;
+    --card: #222831;
+    --text: #2d2d2d;
+    --icons: #ffffff;
+    --secondary: #b8b8b8;
+    --border: #353941;
+    --input: #2b3038;
+    --shadow: 0 12px 30px rgba(0, 0, 0, .35);
+}
+
 body {
     min-height: 100vh;
     margin: 0;
 
-    background: #F8F8F8;
+    background: var(--bg);
+    color: var(--text);
+    transition: .3s;
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -30,14 +56,14 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-    background: #fff;
-    border-bottom: 1px solid #ececec;
+    background: var(--nav);
+    border-bottom: 1px solid var(--border);
 }
 
 nav .left h3 {
     font-size: 2rem;
     font-weight: 700;
-    color: #2D2D2D;
+    color: var(--icons);
 }
 
 nav .left span {
@@ -62,9 +88,9 @@ nav .right {
     outline: none;
     border-radius: 50%;
 
-    background: #F8F8F8;
+    background: var(--card);
 
-    color: #444;
+    color: var(--icons);
     font-size: 1.25rem;
 
     cursor: pointer;
@@ -95,7 +121,7 @@ nav .nav-icon:hover {
     padding: 12px 24px;
 
     background: #E0A458;
-    color: #fff;
+    color: var(--card);
 
     text-decoration: none;
     font-size: 1rem;
@@ -112,7 +138,8 @@ nav .nav-icon:hover {
 .homebtn:hover {
     background: #c98d3d;
     transform: translateY(-3px);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, .18);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
 }
 
 .homebtn:active {
@@ -138,7 +165,7 @@ main {
 
 .top h1 {
     font-size: 2rem;
-    color: #2c2c2c;
+    color: var(--text);
 }
 
 #clrBtn {
@@ -167,7 +194,7 @@ main div {
     align-items: center;
     gap: 20px;
     padding: 16px 0;
-    border-bottom: 1px solid #ececec;
+    border-bottom: 1px solid var(--border);
 }
 
 main div:last-child {
@@ -178,26 +205,27 @@ main p {
     width: 150px;
     font-size: 1rem;
     font-weight: 600;
-    color: #444;
+    color: var(--text);
 }
 
 main input {
     flex: 1;
     padding: 12px 16px;
-    border: 2px solid #e6e6e6;
+    border: 2px solid var(--border);
     border-radius: 10px;
     outline: none;
     font-size: 1rem;
     transition: .3s ease;
-    background: #fafafa;
+    background: var(--input);
+    color: var(--text);
 }
 
 main input:focus {
     border-color: #E2A24A;
-    background: #fff;
+    background: var(--card);
     box-shadow: 0 0 0 4px rgba(226, 162, 74, .15);
 }
 
 main input::placeholder {
-    color: #999;
+    color: var(--secondary);
 }

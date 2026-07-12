@@ -6,11 +6,31 @@
         "Segoe UI", sans-serif;
 }
 
+:root{
+    --bg:#f5f7fb;
+    --nav:#ffffff;
+    --card:#ffffff;
+    --text:#222;
+    --secondary:#666;
+    --glass:rgba(255,255,255,.25);
+}
+
+body.dark{
+    --bg:#0d1117;
+    --nav:#181c22;
+    --card:#222831;
+    --text:#ffffff;
+    --secondary:#b6bcc8;
+    --glass:rgba(0,0,0,.30);
+}
+
 body {
     min-height: 100vh;
     margin: 0;
 
-    background: #F8F8F8;
+    background: var(--bg);
+    color: var(--text);
+    transition: .3s;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -30,14 +50,14 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-    background: #fff;
+    background: var(--nav);
     border-bottom: 1px solid #ececec;
 }
 
 nav .left h3 {
     font-size: 2rem;
     font-weight: 700;
-    color: #2D2D2D;
+    color: var(--text);
 }
 
 nav .left span {
@@ -62,9 +82,9 @@ nav .right {
     outline: none;
     border-radius: 50%;
 
-    background: #F8F8F8;
+    background: var(--card);
 
-    color: #444;
+    color: var(--text);
     font-size: 1.25rem;
 
     cursor: pointer;
@@ -91,6 +111,27 @@ main {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    position: relative;
+    overflow: hidden;
+}
+
+main::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    transition: .3s;
+}
+
+body.dark main::before{
+    background: rgb(0, 0, 0, .45);
+}
+
+body.dark .weather-card,
+body.dark nav{
+    position: relative;
+    z-index: 2;
 }
 
 /* Weather Section */
@@ -116,7 +157,8 @@ main {
 
     padding: 40px 50px;
 
-    background: transparent;
+    background: var(--glass);
+    backdrop-filter: blur(15px);
     border-radius: 24px;
 
     border: 2px solid rgba(235, 142, 21, 0.677);
@@ -135,7 +177,7 @@ main {
 }
 
 #date {
-    color: #232222;
+    color: var(--secondary);
     font-size: 1rem;
     font-weight: 500;
 }
@@ -143,7 +185,7 @@ main {
 #day {
     font-size: 3rem;
     font-weight: 700;
-    color: #282828;
+    color: var(--text);
     line-height: 1.2;
 }
 
@@ -159,7 +201,7 @@ main {
 #city {
     font-size: 1.4rem;
     font-weight: 600;
-    color: #212020;
+    color: var(--text);
 }
 
 /* Right */
@@ -185,7 +227,7 @@ main {
 #condition {
     font-size: 1.4rem;
     font-weight: 600;
-    color: #2d2d2d;
+    color: var(--text);
 }
 
 /* Extra Info */
@@ -202,9 +244,9 @@ main {
 
     padding: 14px 18px;
 
-    background: #fafafa;
+    background: var(--card);
 
-    border: 1px solid #ededed;
+    border: 1px solid rgb(255, 255, 255,.15);
 
     border-radius: 14px;
 
@@ -213,7 +255,7 @@ main {
 
 .info-box p {
     font-size: .85rem;
-    color: #777;
+    color: var(--secondary);
     margin-bottom: 8px;
 }
 
@@ -240,7 +282,7 @@ main {
 
     padding: 12px 20px;
 
-    background: rgba(255, 255, 255, .6);
+    background: var(--glass);
     backdrop-filter: blur(25px);
 
     border: 1px solid rgba(255, 255, 255, .35);
@@ -284,7 +326,7 @@ main {
 
 .dock .dock-item:hover {
     transform: translateY(-18px) scale(1.25);
-    background: #fff;
+    background: var(--card);
 
     box-shadow:
         0 15px 30px rgba(0, 0, 0, .15);

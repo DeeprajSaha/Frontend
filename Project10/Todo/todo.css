@@ -6,9 +6,32 @@
         "Segoe UI", sans-serif;
 }
 
+:root {
+    --bg: #f8f8f8;
+    --nav: #ffffff;
+    --card: #ffffff;
+    --text: #2d2d2d;
+    --secondary: #666;
+    --border: #ececec;
+    --input: #ffffff;
+    --shadow: 0 8px 20px rgba(0, 0, 0, .08);
+}
+
+body.dark {
+    --bg: #0f1117;
+    --nav: #181a20;
+    --card: #222831;
+    --text: #ffffff;
+    --secondary: #b8b8b8;
+    --border: #353941;
+    --input: #2b3038;
+    --shadow: 0 8px 20px rgba(0, 0, 0, .35);
+}
+
 body {
-    background: #F8F8F8;
-    ;
+    background: var(--bg);
+    color: var(--text);
+    transition: .3s;
 }
 
 
@@ -24,14 +47,14 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-    background: #fff;
+    background: var(--nav);
     border-bottom: 1px solid #ececec;
 }
 
 nav .left h3 {
     font-size: 2rem;
     font-weight: 700;
-    color: #2D2D2D;
+    color: var(--text);
 }
 
 nav .left span {
@@ -56,9 +79,9 @@ nav .right {
     outline: none;
     border-radius: 50%;
 
-    background: #F8F8F8;
+    background: var(--card);
 
-    color: #444;
+    color: var(--text);
     font-size: 1.25rem;
 
     cursor: pointer;
@@ -132,11 +155,11 @@ main {
 
     padding: 20px;
 
-    background: #fff;
+    background: var(--card);
 
     border-radius: 18px;
 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+    box-shadow: var(--shadow);
 }
 
 .input input {
@@ -144,7 +167,10 @@ main {
 
     padding: 16px 20px;
 
-    border: 2px solid #ececec;
+    background: var(--input);
+    color: var(--text);
+
+    border: 2px solid var(--border);
 
     border-radius: 14px;
 
@@ -157,6 +183,10 @@ main {
 
 .input input:focus {
     border-color: #E0A458;
+}
+
+.input input::placeholder{
+    color:var(--secondary);
 }
 
 .input button {
@@ -213,18 +243,12 @@ main {
     transition: .25s;
 }
 
-/* .task:hover {
-    transform: translateY(-4px);
-
-    box-shadow: 0 15px 35px rgba(0, 0, 0, .1);
-} */
-
 /* Task Text */
 
 .task p {
     font-size: 1.05rem;
 
-    color: #333;
+    color: var(--text);
 }
 
 /* ================= BUTTONS ================= */
@@ -275,11 +299,11 @@ main {
     margin-top: 18px;
     padding: 18px 24px;
 
-    background: #fff;
-    border: 1px solid #ececec;
+    background: var(--card);
+    border: 1px solid var(--border);
     border-radius: 16px;
 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+    box-shadow: var(--shadow);
     transition: .3s;
 }
 

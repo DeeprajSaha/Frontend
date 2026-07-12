@@ -3,6 +3,31 @@ const start = document.getElementById("start");
 const stop = document.getElementById("stop");
 const reset = document.getElementById("reset");
 
+const body = document.body;
+const themeBtn = document.getElementById("themeBtn");
+const themeIcon = themeBtn.querySelector("i");
+
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "dark") {
+    body.classList.add("dark");
+    themeIcon.className = "ri-sun-line";
+} else {
+    themeIcon.className = "ri-moon-line";
+}
+
+themeBtn.addEventListener("click", () => {
+    body.classList.toggle("dark");
+
+    if (body.classList.contains("dark")) {
+        themeIcon.className = "ri-sun-line";
+        localStorage.setItem("theme", "dark");
+    } else {
+        themeIcon.className = "ri-moon-line";
+        localStorage.setItem("theme", "light");
+    }
+});
+
 let hours = 0;
 let minutes = 0;
 let seconds = 0;
