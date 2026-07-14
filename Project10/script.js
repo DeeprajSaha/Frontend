@@ -20,6 +20,62 @@ const body = document.body;
 const themeBtn = document.getElementById("themeBtn");
 const themeIcon = themeBtn.querySelector("i");
 
+const quoteToggle = document.getElementById("quoteToggle");
+const quotePopup = document.getElementById("quotePopup");
+const quoteText = document.getElementById("quoteText");
+const quoteAuthor = document.getElementById("quoteAuthor");
+const closeQuote = document.getElementById("closeQuote");
+const nextQuote = document.getElementById("nextQuote");
+
+const quotes = [
+    {
+        text: "Success is the sum of small efforts, repeated day in and day out.",
+        author: "Robert Collier"
+    },
+    {
+        text: "Dream big. Start small. Act now.",
+        author: "Robin Sharma"
+    },
+    {
+        text: "Small progress is still progress.",
+        author: "Unknown"
+    },
+    {
+        text: "The future depends on what you do today.",
+        author: "Mahatma Gandhi"
+    },
+    {
+        text: "Don't watch the clock; do what it does. Keep going.",
+        author: "Sam Levenson"
+    }
+];
+
+let currentIndex = Math.floor(Math.random() * quotes.length);
+
+function showQuote() {
+    quoteText.textContent = `"${quotes[currentIndex].text}"`;
+    quoteAuthor.textContent = `— ${quotes[currentIndex].author}`;
+}
+
+quoteToggle.addEventListener("click", () => {
+    showQuote();
+    quotePopup.classList.remove("hidden");
+})
+
+closeQuote.addEventListener("click", () => {
+    quotePopup.classList.add("hidden");
+})
+
+nextQuote.addEventListener("click", () => {
+
+    currentIndex++;
+
+    if (currentIndex >= quotes.length) {
+        currentIndex = 0;
+    }
+
+    showQuote();
+});
 
 const savedTheme = localStorage.getItem("theme");
 

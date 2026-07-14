@@ -6,22 +6,22 @@
         "Segoe UI", sans-serif;
 }
 
-:root{
-    --bg:#f5f7fb;
-    --nav:#ffffff;
-    --card:#ffffff;
-    --text:#222;
-    --secondary:#666;
-    --glass:rgba(255,255,255,.25);
+:root {
+    --bg: #f5f7fb;
+    --nav: #ffffff;
+    --card: #ffffff;
+    --text: #222;
+    --secondary: #666;
+    --glass: rgba(255, 255, 255, .25);
 }
 
-body.dark{
-    --bg:#0d1117;
-    --nav:#181c22;
-    --card:#222831;
-    --text:#ffffff;
-    --secondary:#b6bcc8;
-    --glass:rgba(0,0,0,.30);
+body.dark {
+    --bg: #0d1117;
+    --nav: #181c22;
+    --card: #222831;
+    --text: #ffffff;
+    --secondary: #b6bcc8;
+    --glass: rgba(0, 0, 0, .30);
 }
 
 body {
@@ -116,7 +116,7 @@ main {
     overflow: hidden;
 }
 
-main::before{
+main::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -124,12 +124,12 @@ main::before{
     transition: .3s;
 }
 
-body.dark main::before{
+body.dark main::before {
     background: rgb(0, 0, 0, .45);
 }
 
 body.dark .weather-card,
-body.dark nav{
+body.dark nav {
     position: relative;
     z-index: 2;
 }
@@ -246,7 +246,7 @@ body.dark nav{
 
     background: var(--card);
 
-    border: 1px solid rgb(255, 255, 255,.15);
+    border: 1px solid rgb(255, 255, 255, .15);
 
     border-radius: 14px;
 
@@ -264,7 +264,205 @@ body.dark nav{
     color: #E0A458;
     font-weight: 700;
 }
+/* ================= QUOTE BUTTON ================= */
 
+#quoteToggle {
+    position: fixed;
+
+    right: 30px;
+    bottom: 120px;
+
+    width: 60px;
+    height: 60px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #E0A458;
+    color: white;
+
+    font-size: 1.6rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .25);
+
+    transition: .3s ease;
+
+    z-index: 999;
+}
+
+#quoteToggle:hover {
+    transform: scale(1.08) translateY(-3px);
+    background: #c98d3d;
+}
+
+#quoteToggle:active {
+    transform: scale(.95);
+}
+
+/* ================= QUOTE POPUP ================= */
+
+#quotePopup {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, .5);
+
+    z-index: 2000;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ================= QUOTE BOX ================= */
+
+.quote-box {
+    width: 500px;
+    max-width: 90%;
+
+    padding: 35px;
+
+    background: var(--card);
+
+    color: var(--text);
+
+    border-radius: 22px;
+
+    border: 1px solid rgba(255,255,255,.15);
+
+    box-shadow: 0 20px 50px rgba(0,0,0,.25);
+
+    position: relative;
+
+    text-align: center;
+
+    animation: popup .25s ease;
+}
+
+/* ================= CLOSE BUTTON ================= */
+
+#closeQuote {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: var(--glass);
+
+    color: var(--text);
+
+    font-size: 1.2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+#closeQuote:hover {
+    background: #ef4444;
+    color: white;
+    transform: rotate(90deg);
+}
+
+/* ================= CONTENT ================= */
+
+.quote-box h2 {
+    margin-bottom: 25px;
+
+    color: var(--text);
+
+    font-size: 1.8rem;
+}
+
+#quoteText {
+    font-size: 1.3rem;
+
+    line-height: 1.8;
+
+    font-style: italic;
+
+    color: var(--text);
+
+    margin-bottom: 20px;
+}
+
+#quoteAuthor {
+    display: block;
+
+    color: var(--secondary);
+
+    margin-bottom: 30px;
+
+    font-weight: 600;
+}
+
+/* ================= BUTTONS ================= */
+
+.quote-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.quote-actions button {
+    padding: 12px 24px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #E0A458;
+
+    color: white;
+
+    font-size: .95rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.quote-actions button:hover {
+    background: #c98d3d;
+    transform: translateY(-2px);
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes popup {
+
+    from {
+        opacity: 0;
+        transform: scale(.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
 
 /* ================= WINDOWS DOCK ================= */
 
