@@ -37,7 +37,7 @@ const Register = () => {
             return;
         }
 
-        let arr = [...users, data];
+        let arr = [...(users || []), data];
 
         setUsers(arr);
 

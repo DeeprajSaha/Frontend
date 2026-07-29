@@ -54,7 +54,7 @@ const CartScreen = () => {
 
                     <div className="flex justify-between mb-4">
                         <span>Subtotal</span>
-                        <span>${...totalPrice.toFixed(2)}</span>
+                        <span>${totalPrice.toFixed(2)}</span>
                     </div>
 
                     <div className="flex justify-between mb-4">

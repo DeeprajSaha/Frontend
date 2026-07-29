@@ -14,7 +14,7 @@ const NavBar = () => {
 
     const handleLogout = () => {
         localStorage.removeItem("loggedInUser");
-        setUsers(null);
+        setUsers([]);
         navigate("/");
     };
 

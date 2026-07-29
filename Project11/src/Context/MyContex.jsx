@@ -90,6 +90,7 @@ export const ContextProvider = ({ children }) => {
                 search,
                 setSearch,
                 deleteProducts,
+                currentUser,
             }}
         >
             {children}

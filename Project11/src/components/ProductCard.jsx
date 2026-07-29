@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { FaStar } from "react-icons/fa";
 import { MyStore } from "../Context/MyContex";
+import toast, { Toaster } from "react-hot-toast";
 
 const ProductCard = ({ product, isInCart }) => {
     let { setCartItems, incrementQuantity, decrementQuantity } =
@@ -8,12 +9,13 @@ const ProductCard = ({ product, isInCart }) => {
 
     const addToCart = () => {
         setCartItems((prev) => [...prev, { ...product, quantity: 1 }]);
-        alert("Product added into cart....");
+        toast.success("Product added into cart....");
     };
 
     return (
         <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer">
             {/* Image */}
+            <Toaster position="top-center" reverseOrder={false}/>
             <div className="h-64 bg-gray-100 flex items-center justify-center p-5 overflow-hidden">
                 <img
                     src={product.image}

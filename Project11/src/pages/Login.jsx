@@ -12,6 +12,7 @@ import {
 import { useForm } from "react-hook-form";
 import { MyStore } from "../Context/MyContex";
 import { useNavigate } from "react-router";
+import toast, { Toaster } from "react-hot-toast";
 
 const Login = () => {
     let { users, setUsers, setScreen } = useContext(MyStore);
@@ -28,19 +29,20 @@ const Login = () => {
         );
 
         if (loggedInUser) {
+            toast.success("Login Successful");
             localStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
 
-            alert("Login Successful");
             navigate("/home");
             reset();
         } else {
-            alert("Invalid Email or Password");
+            toast.error("Invalid Email or Password");
         }
     };
 
     return (
         <div className="relative flex h-screen w-full items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-indigo-50 px-4 py-4 font-sans text-slate-800">
             {/* Background Soft Blurs */}
+            <Toaster position="top-center" reverseOrder={false} />
             <div className="pointer-events-none absolute -left-20 -top-20 h-72 w-72 rounded-full bg-indigo-600/10 blur-[100px]" />
             <div className="pointer-events-none absolute -bottom-20 -right-20 h-80 w-80 rounded-full bg-cyan-500/10 blur-[120px]" />
 
